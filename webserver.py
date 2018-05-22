@@ -1,7 +1,9 @@
+'''
+Code edited from https://gist.github.com/bradmontgomery/2219997
+'''
+
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import socket
-
-
 
 class customHandler(BaseHTTPRequestHandler):
     def _set_headers(self):
@@ -21,9 +23,6 @@ class customHandler(BaseHTTPRequestHandler):
         # Doesn't do anything with posted data
         self._set_headers()
         self.wfile.write("<html><body><h1>POST!</h1></body></html>")
-
-
-
 
 
 class S(BaseHTTPRequestHandler):
